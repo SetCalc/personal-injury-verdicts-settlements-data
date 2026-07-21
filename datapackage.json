@@ -1,0 +1,73 @@
+{
+  "name": "setcalc-personal-injury-verdicts-settlements",
+  "title": "SetCalc Personal Injury Verdicts and Settlements Dataset",
+  "description": "Open dataset of 3,099 United States personal injury verdicts and settlements: state, county, year, practice area, injury type, result type, and dollar amount for every record. Compiled and reviewed by SetCalc, the free settlement calculator at setcalc.com. Browse the live searchable database at https://setcalc.com/personal-injury-verdicts-and-settlements.",
+  "homepage": "https://setcalc.com/personal-injury-verdicts-and-settlements",
+  "version": "2026.07",
+  "created": "2026-07-21",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "SetCalc",
+      "path": "https://setcalc.com",
+      "role": "author"
+    }
+  ],
+  "keywords": [
+    "personal injury",
+    "settlements",
+    "verdicts",
+    "settlement amounts",
+    "settlement calculator",
+    "car accident",
+    "truck accident",
+    "medical malpractice",
+    "legal data",
+    "open data",
+    "united states"
+  ],
+  "resources": [
+    {
+      "name": "verdicts-settlements-csv",
+      "path": "data/verdicts-settlements.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          { "name": "caseTitle", "type": "string", "description": "Case caption or short title where available; blank for records compiled from summary reporting" },
+          { "name": "state", "type": "string", "description": "Full US state name, e.g. California", "constraints": { "required": true } },
+          { "name": "county", "type": "string", "description": "County or parish where available" },
+          { "name": "year", "type": "integer", "description": "Year of the verdict or settlement", "constraints": { "required": true } },
+          { "name": "practiceArea", "type": "string", "description": "Case category, one of 12 values, e.g. Car Accident, Medical Malpractice, Truck Accident", "constraints": { "required": true } },
+          { "name": "injuryType", "type": "string", "description": "Primary injury category, e.g. Wrongful Death, Brain Injury, Back Injury", "constraints": { "required": true } },
+          { "name": "resultType", "type": "string", "description": "verdict or settlement", "constraints": { "required": true, "enum": ["verdict", "settlement"] } },
+          { "name": "amount", "type": "number", "description": "Result amount in US dollars", "constraints": { "required": true } },
+          { "name": "description", "type": "string", "description": "One-paragraph case summary", "constraints": { "required": true } },
+          { "name": "source", "type": "string", "description": "Source category or publication for the record", "constraints": { "required": true } }
+        ]
+      }
+    },
+    {
+      "name": "verdicts-settlements-json",
+      "path": "data/verdicts-settlements.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8"
+    },
+    {
+      "name": "summary-stats",
+      "path": "data/summary-stats.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "description": "Record counts, year range, and median amounts overall and by practice area, result type, and source"
+    }
+  ]
+}

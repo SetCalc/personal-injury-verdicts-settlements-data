@@ -1,0 +1,145 @@
+{
+  "dataset": "SetCalc Personal Injury Verdicts and Settlements Dataset",
+  "homepage": "https://setcalc.com/personal-injury-verdicts-and-settlements",
+  "license": "CC-BY-4.0",
+  "asOf": "2026-07-21",
+  "recordCount": 3099,
+  "yearMin": 1973,
+  "yearMax": 2026,
+  "stateCount": 50,
+  "medianAmount": 282111,
+  "byPracticeArea": {
+    "Personal Injury": {
+      "count": 991,
+      "medianAmount": 15546
+    },
+    "Car Accident": {
+      "count": 545,
+      "medianAmount": 875000
+    },
+    "Medical Malpractice": {
+      "count": 493,
+      "medianAmount": 1500000
+    },
+    "Truck Accident": {
+      "count": 310,
+      "medianAmount": 1282128.97
+    },
+    "Premises Liability": {
+      "count": 186,
+      "medianAmount": 1555000
+    },
+    "Other": {
+      "count": 158,
+      "medianAmount": 5500000
+    },
+    "Bus Accident": {
+      "count": 127,
+      "medianAmount": 500000
+    },
+    "Workplace Injury": {
+      "count": 89,
+      "medianAmount": 2900000
+    },
+    "Pedestrian Accident": {
+      "count": 64,
+      "medianAmount": 1612501
+    },
+    "Motorcycle Accident": {
+      "count": 61,
+      "medianAmount": 2200000
+    },
+    "Slip and Fall": {
+      "count": 52,
+      "medianAmount": 625000
+    },
+    "Bicycle Accident": {
+      "count": 23,
+      "medianAmount": 1100000
+    }
+  },
+  "byResultType": {
+    "verdict": {
+      "count": 2168,
+      "medianAmount": 50052
+    },
+    "settlement": {
+      "count": 931,
+      "medianAmount": 1600000
+    }
+  },
+  "bySource": {
+    "News": {
+      "count": 1084,
+      "medianAmount": 1768500
+    },
+    "STATE_COURT": {
+      "count": 994,
+      "medianAmount": 15583.5
+    },
+    "CourtListener": {
+      "count": 725,
+      "medianAmount": 500000
+    },
+    "TopVerdict": {
+      "count": 227,
+      "medianAmount": 3250000
+    },
+    "TopVerdict Illinois 2023 Top 50 Personal Injury Verdicts list": {
+      "count": 21,
+      "medianAmount": 250000
+    },
+    "TopVerdict Illinois 2024 Top 100 Verdicts list": {
+      "count": 16,
+      "medianAmount": 213348.5
+    },
+    "NC Lawyers Weekly": {
+      "count": 9,
+      "medianAmount": 5490000
+    },
+    "Courtroom View Network trial coverage": {
+      "count": 7,
+      "medianAmount": 8000000
+    },
+    "Las Vegas Review-Journal": {
+      "count": 5,
+      "medianAmount": 1000000
+    },
+    "Firm results page (Chester Law Group)": {
+      "count": 3,
+      "medianAmount": 225000
+    },
+    "PR Newswire": {
+      "count": 1,
+      "medianAmount": 1272926
+    },
+    "Law Firm Newswire": {
+      "count": 1,
+      "medianAmount": 82105346
+    },
+    "WDTN via Yahoo News": {
+      "count": 1,
+      "medianAmount": 16000000
+    },
+    "WCPO Cincinnati": {
+      "count": 1,
+      "medianAmount": 10000000
+    },
+    "Akron Legal News": {
+      "count": 1,
+      "medianAmount": 6100000
+    },
+    "Firm trial report (Elk & Elk)": {
+      "count": 1,
+      "medianAmount": 2750000
+    },
+    "EHS Today": {
+      "count": 1,
+      "medianAmount": 39000000
+    },
+    "Ohio Court of Appeals (8th District) opinion via FindLaw": {
+      "count": 1,
+      "medianAmount": 34600000
+    }
+  }
+}

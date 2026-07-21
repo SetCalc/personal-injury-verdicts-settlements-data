@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below and link to setcalc.com."
+title: "SetCalc Personal Injury Verdicts and Settlements Dataset"
+type: dataset
+authors:
+  - name: "SetCalc"
+    website: "https://setcalc.com"
+url: "https://setcalc.com/personal-injury-verdicts-and-settlements"
+repository-code: "https://github.com/SetCalc/personal-injury-verdicts-settlements-data"
+license: CC-BY-4.0
+version: "2026.07"
+date-released: "2026-07-21"
+abstract: "Open dataset of 3,099 United States personal injury verdicts and settlements, including state, county, year, practice area, injury type, result type, and dollar amount for every record. Compiled from court records, federal dockets, verdict reporters, and news reports by SetCalc, the free settlement calculator."
+keywords:
+  - "personal injury"
+  - "settlements"
+  - "verdicts"
+  - "settlement calculator"
+  - "settlement amounts"
+  - "car accident"
+  - "medical malpractice"
+  - "legal data"
+  - "open data"
