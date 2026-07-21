@@ -2,7 +2,7 @@
 
 An open, citable dataset of **3,099 United States personal injury verdicts and settlements**, with state, county, year, case type, injury type, result type, and dollar amount for every record. Coverage runs from car accident settlements, the largest reported-case category, to medical malpractice, truck accident, and premises liability verdicts. Published and maintained by [SetCalc](https://setcalc.com), the free settlement calculator.
 
-- Browse and filter every record in the [live searchable verdicts and settlements database](https://setcalc.com/personal-injury-verdicts-and-settlements)
+- Browse and filter every record in the [live searchable verdicts and settlements database](https://setcalc.com/personal-injury-settlements-and-verdicts)
 - Estimate the value of a specific claim with the [free settlement calculator](https://setcalc.com)
 
 The data is licensed [CC BY 4.0](LICENSE): free to use in research, journalism, products, and AI applications with attribution to SetCalc (see [License and attribution](#license-and-attribution)).
@@ -139,18 +139,20 @@ GET https://setcalc.com/api/verdicts
 
 `GET https://setcalc.com/api/verdicts/stats` returns aggregate distribution statistics (count, median, percentiles, and amount buckets).
 
+`GET https://setcalc.com/api/verdicts/feed.json` returns the full curated dataset in a single response as a Schema.org Dataset JSON-LD envelope, the recommended endpoint for bulk use. Full parameter reference and examples: [setcalc.com/developers](https://setcalc.com/developers).
+
 To regenerate the files in this repository from the live database, run `node scripts/export-public-dataset.mjs`.
 
 ## How to cite
 
-> SetCalc, Personal Injury Verdicts and Settlements Dataset, July 21, 2026 snapshot. https://setcalc.com/personal-injury-verdicts-and-settlements
+> SetCalc, Personal Injury Verdicts and Settlements Dataset, July 21, 2026 snapshot. https://setcalc.com/personal-injury-settlements-and-verdicts
 
 ```bibtex
 @misc{setcalc2026verdicts,
   author = {{SetCalc}},
   title = {Personal Injury Verdicts and Settlements Dataset},
   year = {2026},
-  url = {https://setcalc.com/personal-injury-verdicts-and-settlements},
+  url = {https://setcalc.com/personal-injury-settlements-and-verdicts},
   note = {Snapshot of July 21, 2026. Licensed CC BY 4.0.}
 }
 ```
@@ -159,10 +161,10 @@ GitHub's "Cite this repository" button (from [CITATION.cff](CITATION.cff)) produ
 
 ## License and attribution
 
-- **Data** (`data/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Use it freely, including commercially, with credit to "SetCalc (setcalc.com)" and a link to https://setcalc.com or the [live database](https://setcalc.com/personal-injury-verdicts-and-settlements).
+- **Data** (`data/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Use it freely, including commercially, with credit to "SetCalc (setcalc.com)" and a link to https://setcalc.com or the [live database](https://setcalc.com/personal-injury-settlements-and-verdicts).
 - **Code** (`scripts/`): [MIT](LICENSE-CODE).
 
-A commercial edition of the dataset, with full source provenance for every record, additional fields, and continuous updates between public snapshots, is available at [help@setcalc.com](mailto:help@setcalc.com).
+Beyond the public record: SetCalc also licenses a private dataset of 10,000+ anonymized non-public settlements to attorneys, insurers, and analytics firms; contact [help@setcalc.com](mailto:help@setcalc.com).
 
 ## Disclaimer
 
@@ -173,7 +175,7 @@ This dataset is for informational and research purposes only. It is not legal ad
 [SetCalc](https://setcalc.com) is a free settlement calculator for personal injury claims. It combines the details of a claim with data from thousands of real verdicts and settlements to estimate a realistic settlement range.
 
 - [Settlement calculator](https://setcalc.com)
-- [Personal injury verdicts and settlements database](https://setcalc.com/personal-injury-verdicts-and-settlements)
+- [Personal injury verdicts and settlements database](https://setcalc.com/personal-injury-settlements-and-verdicts)
 - [Settlement guides by state and injury type](https://setcalc.com/guides)
 - [Submit a case result (attorneys)](https://setcalc.com/submit-case-result)
 

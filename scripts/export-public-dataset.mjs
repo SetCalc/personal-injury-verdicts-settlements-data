@@ -144,7 +144,7 @@ async function main() {
 
   const summary = {
     dataset: 'SetCalc Personal Injury Verdicts and Settlements Dataset',
-    homepage: 'https://setcalc.com/personal-injury-verdicts-and-settlements',
+    homepage: 'https://setcalc.com/personal-injury-settlements-and-verdicts',
     license: 'CC-BY-4.0',
     asOf: new Date().toISOString().slice(0, 10),
     recordCount: records.length,

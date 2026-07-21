@@ -5,7 +5,7 @@ type: dataset
 authors:
   - name: "SetCalc"
     website: "https://setcalc.com"
-url: "https://setcalc.com/personal-injury-verdicts-and-settlements"
+url: "https://setcalc.com/personal-injury-settlements-and-verdicts"
 repository-code: "https://github.com/SetCalc/personal-injury-verdicts-settlements-data"
 license: CC-BY-4.0
 version: "2026.07"
