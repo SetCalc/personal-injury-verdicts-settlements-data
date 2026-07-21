@@ -55,6 +55,14 @@
       }
     },
     {
+      "name": "car-accident-settlements-csv",
+      "path": "data/car-accident-settlements.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "description": "Car accident settlements and verdicts only (545 records), same schema as the full dataset"
+    },
+    {
       "name": "verdicts-settlements-json",
       "path": "data/verdicts-settlements.json",
       "format": "json",

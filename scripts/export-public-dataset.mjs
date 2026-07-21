@@ -75,6 +75,14 @@ function median(sortedNums) {
   return n % 2 ? sortedNums[mid] : (sortedNums[mid - 1] + sortedNums[mid]) / 2;
 }
 
+function percentile(sortedNums, p) {
+  if (!sortedNums.length) return null;
+  const idx = (sortedNums.length - 1) * p;
+  const lo = Math.floor(idx);
+  const hi = Math.ceil(idx);
+  return sortedNums[lo] + (sortedNums[hi] - sortedNums[lo]) * (idx - lo);
+}
+
 async function main() {
   const first = await fetchPage(1);
   const total = first.total;
@@ -127,6 +135,13 @@ async function main() {
     );
   };
 
+  // Car accident slice: the highest-demand vertical gets its own ready-made
+  // file and summary block.
+  const car = records.filter((r) => r.practiceArea === 'Car Accident');
+  const carAmounts = car.map((r) => r.amount).sort((x, y) => x - y);
+  const carStates = {};
+  for (const r of car) carStates[r.state] = (carStates[r.state] || 0) + 1;
+
   const summary = {
     dataset: 'SetCalc Personal Injury Verdicts and Settlements Dataset',
     homepage: 'https://setcalc.com/personal-injury-verdicts-and-settlements',
@@ -137,6 +152,18 @@ async function main() {
     yearMax: Math.max(...years),
     stateCount: states.size,
     medianAmount: median(amounts),
+    carAccident: {
+      count: car.length,
+      medianAmount: median(carAmounts),
+      p25: percentile(carAmounts, 0.25),
+      p75: percentile(carAmounts, 0.75),
+      verdicts: car.filter((r) => r.resultType === 'verdict').length,
+      settlements: car.filter((r) => r.resultType === 'settlement').length,
+      topStates: Object.entries(carStates)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([state, count]) => ({ state, count })),
+    },
     byPracticeArea: group('practiceArea'),
     byResultType: group('resultType'),
     bySource: group('source'),
@@ -150,6 +177,10 @@ async function main() {
     ...records.map((r) => FIELDS.map((f) => csvCell(r[f])).join(',')),
   ].join('\n');
   writeFileSync(join(outDir, 'verdicts-settlements.csv'), csv + '\n');
+  writeFileSync(
+    join(outDir, 'car-accident-settlements.csv'),
+    [FIELDS.join(','), ...car.map((r) => FIELDS.map((f) => csvCell(r[f])).join(','))].join('\n') + '\n',
+  );
   writeFileSync(join(outDir, 'verdicts-settlements.json'), JSON.stringify(records, null, 1) + '\n');
   writeFileSync(join(outDir, 'summary-stats.json'), JSON.stringify(summary, null, 2) + '\n');
 
@@ -157,6 +188,7 @@ async function main() {
   console.log('practice areas:', Object.entries(summary.byPracticeArea).map(([k, v]) => `${k}:${v.count}`).join(' '));
   console.log('sources:', Object.entries(summary.bySource).map(([k, v]) => `${k}:${v.count}`).join(' '));
   console.log('result types:', Object.entries(summary.byResultType).map(([k, v]) => `${k}:${v.count}`).join(' '));
+  console.log('car accident:', JSON.stringify(summary.carAccident));
 }
 
 main().catch((err) => {

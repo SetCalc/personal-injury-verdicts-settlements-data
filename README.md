@@ -1,6 +1,6 @@
 # Personal Injury Verdicts and Settlements Dataset
 
-An open, citable dataset of **3,099 United States personal injury verdicts and settlements**, with state, county, year, case type, injury type, result type, and dollar amount for every record. Published and maintained by [SetCalc](https://setcalc.com), the free settlement calculator.
+An open, citable dataset of **3,099 United States personal injury verdicts and settlements**, with state, county, year, case type, injury type, result type, and dollar amount for every record. Coverage runs from car accident settlements, the largest reported-case category, to medical malpractice, truck accident, and premises liability verdicts. Published and maintained by [SetCalc](https://setcalc.com), the free settlement calculator.
 
 - Browse and filter every record in the [live searchable verdicts and settlements database](https://setcalc.com/personal-injury-verdicts-and-settlements)
 - Estimate the value of a specific claim with the [free settlement calculator](https://setcalc.com)
@@ -30,6 +30,7 @@ The data is licensed [CC BY 4.0](LICENSE): free to use in research, journalism, 
 |---|---|
 | [data/verdicts-settlements.csv](data/verdicts-settlements.csv) | Full dataset, one row per case result |
 | [data/verdicts-settlements.json](data/verdicts-settlements.json) | Same records as a JSON array |
+| [data/car-accident-settlements.csv](data/car-accident-settlements.csv) | Car accident records only, same columns (545 rows) |
 | [data/summary-stats.json](data/summary-stats.json) | Record counts, year range, and median amounts overall and by practice area, result type, and source |
 | [scripts/export-public-dataset.mjs](scripts/export-public-dataset.mjs) | Script that regenerates the data files from the live SetCalc API (Node 18+, no dependencies) |
 | [datapackage.json](datapackage.json) | Machine-readable Frictionless Data package descriptor |
@@ -70,6 +71,19 @@ Counts and median amounts in the July 21, 2026 snapshot. The skew caveat above a
 | Bicycle Accident | 23 | $1,100,000 |
 
 The general Personal Injury category is dominated by state court judgment records, including many small default judgments, which is why its median is far lower than the reported-case categories.
+
+## Car accident settlement data
+
+Car accidents are the largest reported-case category in the dataset, and motor vehicle cases overall (car, truck, bus, motorcycle, pedestrian, and bicycle accidents) account for 1,130 records, 36 percent of the dataset. A ready-made car accident slice is published at [data/car-accident-settlements.csv](data/car-accident-settlements.csv). The skew caveat above applies to every number here.
+
+| Fact | Value |
+|---|---|
+| Car accident records | 545 (348 jury verdicts, 197 settlements) |
+| Median reported result | $875,000 |
+| Middle 50 percent of results | $180,000 to $2.67 million |
+| Most represented states | California (121), Illinois (49), New York (45), Texas (42), Colorado (38) |
+
+For what a typical car accident claim pays, as opposed to the publicly reported cases collected here, see SetCalc's [car accident settlement guides by state](https://setcalc.com/guides) or run a specific claim through the [settlement calculator](https://setcalc.com).
 
 ## Sources and methodology
 

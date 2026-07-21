@@ -8,6 +8,36 @@
   "yearMax": 2026,
   "stateCount": 50,
   "medianAmount": 282111,
+  "carAccident": {
+    "count": 545,
+    "medianAmount": 875000,
+    "p25": 180000,
+    "p75": 2670000,
+    "verdicts": 348,
+    "settlements": 197,
+    "topStates": [
+      {
+        "state": "California",
+        "count": 121
+      },
+      {
+        "state": "Illinois",
+        "count": 49
+      },
+      {
+        "state": "New York",
+        "count": 45
+      },
+      {
+        "state": "Texas",
+        "count": 42
+      },
+      {
+        "state": "Colorado",
+        "count": 38
+      }
+    ]
+  },
   "byPracticeArea": {
     "Personal Injury": {
       "count": 991,
