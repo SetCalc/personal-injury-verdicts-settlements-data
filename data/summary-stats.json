@@ -2,105 +2,105 @@
   "dataset": "SetCalc Personal Injury Verdicts and Settlements Dataset",
   "homepage": "https://setcalc.com/personal-injury-settlements-and-verdicts",
   "license": "CC-BY-4.0",
-  "asOf": "2026-07-21",
-  "recordCount": 3099,
+  "asOf": "2026-07-30",
+  "recordCount": 4108,
   "yearMin": 1973,
   "yearMax": 2026,
   "stateCount": 50,
-  "medianAmount": 282111,
+  "medianAmount": 250000,
   "carAccident": {
-    "count": 545,
-    "medianAmount": 875000,
-    "p25": 180000,
-    "p75": 2670000,
-    "verdicts": 348,
-    "settlements": 197,
+    "count": 800,
+    "medianAmount": 405682.03,
+    "p25": 133250,
+    "p75": 1800000,
+    "verdicts": 381,
+    "settlements": 419,
     "topStates": [
+      {
+        "state": "North Carolina",
+        "count": 133
+      },
       {
         "state": "California",
         "count": 121
       },
       {
+        "state": "Massachusetts",
+        "count": 85
+      },
+      {
+        "state": "New Jersey",
+        "count": 51
+      },
+      {
         "state": "Illinois",
         "count": 49
-      },
-      {
-        "state": "New York",
-        "count": 45
-      },
-      {
-        "state": "Texas",
-        "count": 42
-      },
-      {
-        "state": "Colorado",
-        "count": 38
       }
     ]
   },
   "byPracticeArea": {
     "Personal Injury": {
-      "count": 991,
-      "medianAmount": 15546
+      "count": 1111,
+      "medianAmount": 18000
     },
     "Car Accident": {
-      "count": 545,
-      "medianAmount": 875000
+      "count": 800,
+      "medianAmount": 405682.03
     },
     "Medical Malpractice": {
-      "count": 493,
+      "count": 507,
       "medianAmount": 1500000
     },
+    "Workplace Injury": {
+      "count": 485,
+      "medianAmount": 255807.15
+    },
     "Truck Accident": {
-      "count": 310,
-      "medianAmount": 1282128.97
+      "count": 360,
+      "medianAmount": 1225000
     },
     "Premises Liability": {
-      "count": 186,
-      "medianAmount": 1555000
+      "count": 255,
+      "medianAmount": 750000
     },
     "Other": {
-      "count": 158,
-      "medianAmount": 5500000
+      "count": 178,
+      "medianAmount": 4190000
     },
     "Bus Accident": {
-      "count": 127,
+      "count": 138,
       "medianAmount": 500000
     },
-    "Workplace Injury": {
-      "count": 89,
-      "medianAmount": 2900000
+    "Motorcycle Accident": {
+      "count": 90,
+      "medianAmount": 1300000
     },
     "Pedestrian Accident": {
-      "count": 64,
-      "medianAmount": 1612501
-    },
-    "Motorcycle Accident": {
-      "count": 61,
-      "medianAmount": 2200000
+      "count": 89,
+      "medianAmount": 1030000
     },
     "Slip and Fall": {
-      "count": 52,
-      "medianAmount": 625000
+      "count": 66,
+      "medianAmount": 637500
     },
     "Bicycle Accident": {
-      "count": 23,
-      "medianAmount": 1100000
+      "count": 29,
+      "medianAmount": 940000
     }
   },
   "byResultType": {
     "verdict": {
-      "count": 2168,
-      "medianAmount": 50052
+      "count": 2246,
+      "medianAmount": 50062
     },
     "settlement": {
-      "count": 931,
-      "medianAmount": 1600000
+      "count": 1862,
+      "medianAmount": 450000
     }
   },
   "bySource": {
     "News": {
-      "count": 1084,
+      "count": 1104,
       "medianAmount": 1768500
     },
     "STATE_COURT": {
@@ -111,37 +111,137 @@
       "count": 725,
       "medianAmount": 500000
     },
+    "Roberts Law Firm": {
+      "count": 245,
+      "medianAmount": 175000
+    },
     "TopVerdict": {
-      "count": 227,
-      "medianAmount": 3250000
+      "count": 236,
+      "medianAmount": 3275000
+    },
+    "DeMayo Law Offices": {
+      "count": 150,
+      "medianAmount": 350000
+    },
+    "Joye Law Firm": {
+      "count": 141,
+      "medianAmount": 220000
+    },
+    "GWC Injury Lawyers": {
+      "count": 98,
+      "medianAmount": 900000
+    },
+    "Law Office of James K. Meehan": {
+      "count": 72,
+      "medianAmount": 160000
+    },
+    "Jason Stone Injury Lawyers": {
+      "count": 52,
+      "medianAmount": 425000
+    },
+    "Houde Law Office": {
+      "count": 42,
+      "medianAmount": 88750
+    },
+    "Gelman Gelman Wiskow & McCarthy": {
+      "count": 32,
+      "medianAmount": 300000
+    },
+    "Studley Law Offices": {
+      "count": 30,
+      "medianAmount": 100000
+    },
+    "DiBella Law": {
+      "count": 27,
+      "medianAmount": 135000
     },
     "TopVerdict Illinois 2023 Top 50 Personal Injury Verdicts list": {
       "count": 21,
       "medianAmount": 250000
     },
+    "TopVerdict New Jersey 2024 Top 50 Verdicts list": {
+      "count": 18,
+      "medianAmount": 230000
+    },
     "TopVerdict Illinois 2024 Top 100 Verdicts list": {
       "count": 16,
       "medianAmount": 213348.5
+    },
+    "Bottaro Injury Lawyers": {
+      "count": 11,
+      "medianAmount": 100000
+    },
+    "Riddle & Brantley": {
+      "count": 10,
+      "medianAmount": 755500
     },
     "NC Lawyers Weekly": {
       "count": 9,
       "medianAmount": 5490000
     },
     "Courtroom View Network trial coverage": {
+      "count": 8,
+      "medianAmount": 7600000
+    },
+    "Buckeye Law Group": {
       "count": 7,
-      "medianAmount": 8000000
+      "medianAmount": 500000
+    },
+    "Breakstone, White & Gluck": {
+      "count": 6,
+      "medianAmount": 3625000
+    },
+    "TopVerdict New Jersey 2023 Top 20 Verdicts list": {
+      "count": 6,
+      "medianAmount": 1445350.5
     },
     "Las Vegas Review-Journal": {
       "count": 5,
       "medianAmount": 1000000
+    },
+    "TopVerdict New Jersey 2023 Top 10 Verdicts list": {
+      "count": 5,
+      "medianAmount": 4000000
+    },
+    "Jury Verdict Alert": {
+      "count": 4,
+      "medianAmount": 2100000
+    },
+    "Sobczak Law": {
+      "count": 3,
+      "medianAmount": 180000
     },
     "Firm results page (Chester Law Group)": {
       "count": 3,
       "medianAmount": 225000
     },
     "PR Newswire": {
+      "count": 2,
+      "medianAmount": 12436463
+    },
+    "Agency Checklists": {
+      "count": 2,
+      "medianAmount": 49218306
+    },
+    "TopVerdict New Jersey 2024 Top 10 Verdicts list": {
+      "count": 2,
+      "medianAmount": 30375000
+    },
+    "Massachusetts Supreme Judicial Court": {
+      "count": 2,
+      "medianAmount": 7130500
+    },
+    "Insurance Journal": {
       "count": 1,
-      "medianAmount": 1272926
+      "medianAmount": 64000000
+    },
+    "Claims Journal": {
+      "count": 1,
+      "medianAmount": 56000000
+    },
+    "Daily Voice news coverage of the Bergen County verdict": {
+      "count": 1,
+      "medianAmount": 19000000
     },
     "Law Firm Newswire": {
       "count": 1,
@@ -155,9 +255,49 @@
       "count": 1,
       "medianAmount": 10000000
     },
+    "McGowan & Associates": {
+      "count": 1,
+      "medianAmount": 7100000
+    },
+    "TopVerdict New Jersey 2024 Top 20 Verdicts list": {
+      "count": 1,
+      "medianAmount": 2799920
+    },
+    "Butters Brazilian LLP": {
+      "count": 1,
+      "medianAmount": 1850000
+    },
+    "Courtroom View Network": {
+      "count": 1,
+      "medianAmount": 200000000
+    },
+    "New York Appellate Division (First Department) opinion via FindLaw": {
+      "count": 1,
+      "medianAmount": 1604996
+    },
+    "Keches Law Group": {
+      "count": 1,
+      "medianAmount": 26600000
+    },
+    "The Savory Tort": {
+      "count": 1,
+      "medianAmount": 21000000
+    },
+    "Spada Law Group": {
+      "count": 1,
+      "medianAmount": 100000
+    },
+    "United States Court of Appeals for the First Circuit": {
+      "count": 1,
+      "medianAmount": 5400000
+    },
     "Akron Legal News": {
       "count": 1,
       "medianAmount": 6100000
+    },
+    "Massachusetts Workers Compensation Lawyer Blog": {
+      "count": 1,
+      "medianAmount": 10000000
     },
     "Firm trial report (Elk & Elk)": {
       "count": 1,

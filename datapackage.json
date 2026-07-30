@@ -1,10 +1,10 @@
 {
   "name": "setcalc-personal-injury-verdicts-settlements",
   "title": "SetCalc Personal Injury Verdicts and Settlements Dataset",
-  "description": "Open dataset of 3,099 United States personal injury verdicts and settlements: state, county, year, practice area, injury type, result type, and dollar amount for every record. Compiled and reviewed by SetCalc, the free settlement calculator at setcalc.com. Browse the live searchable database at https://setcalc.com/personal-injury-settlements-and-verdicts.",
+  "description": "Open dataset of 4,108 United States personal injury verdicts and settlements: state, county, year, practice area, injury type, result type, and dollar amount for every record. Compiled and reviewed by SetCalc, the free settlement calculator at setcalc.com. Browse the live searchable database at https://setcalc.com/personal-injury-settlements-and-verdicts.",
   "homepage": "https://setcalc.com/personal-injury-settlements-and-verdicts",
-  "version": "2026.07",
-  "created": "2026-07-21",
+  "version": "2026.07.30",
+  "created": "2026-07-30",
   "licenses": [
     {
       "name": "CC-BY-4.0",
@@ -60,7 +60,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "description": "Car accident settlements and verdicts only (545 records), same schema as the full dataset"
+      "description": "Car accident settlements and verdicts only (800 records), same schema as the full dataset"
     },
     {
       "name": "verdicts-settlements-json",
