@@ -22,7 +22,7 @@ The data is licensed [CC BY 4.0](LICENSE): free to use in research, journalism, 
 | License | CC BY 4.0 with attribution to SetCalc |
 | Current snapshot | August 5, 2026 |
 
-**Read this before quoting averages:** this dataset is dominated by publicly reported verdicts, and a large share comes from top-verdict lists that select for the biggest awards, so the overall median runs high and should not be read as what a typical claim pays. Representativeness varies by state and case type: states covered by full-range jury-verdict reporters or bulk civil-court records include the routine, lower-value outcomes and give a much more realistic picture of an average settlement, while states represented mainly by top-verdict lists skew high. Most routine insurance claims resolve for far less than the overall medians here.
+**Read this before quoting averages:** this dataset is dominated by publicly reported verdicts, and much of the reporting it draws on emphasizes larger, notable awards, so the overall median runs high and should not be read as what a typical claim pays. Representativeness varies by state and case type: states with full-range jury-verdict reporting or bulk civil-court records include the routine, lower-value outcomes and give a much more realistic picture of an average settlement, while states covered mainly by notable-award reporting skew high. Most routine insurance claims resolve for far less than the overall medians here.
 
 ## Files
 
@@ -89,13 +89,13 @@ For what a typical car accident claim pays, as opposed to the publicly reported 
 
 Records are compiled from public sources, reviewed before publication, and limited to personal injury matters:
 
-- Verdict reporters, overwhelmingly TopVerdict's national and state top-verdict lists (approximately 12,750 records; by construction these select for the largest awards and are the main reason the overall median runs high)
-- State jury-verdict reporters that cover the full range of outcomes, including Louisiana, Indiana, Tennessee, Alabama, and Mississippi (approximately 650 records; these add representative routine-case coverage that pulls state-level medians down toward typical values)
-- Firm-published case results, each retained with a link to the reporting firm's page (approximately 1,300 records)
-- News reports of verdicts and settlements (1,090 records)
-- State court civil judgment records, primarily Virginia circuit courts (994 records)
-- Federal court dockets via CourtListener (718 records)
-- Legal press and court opinions, including South Carolina and North Carolina Lawyers Weekly, Courtroom View Network, and state supreme court and appellate decisions
+- Published verdict and settlement reporters, national and state
+- State jury-verdict reporting that covers the full range of outcomes, which adds representative routine-case coverage and pulls state-level medians toward typical values
+- Firm-published case results, each retained with a link to the reporting firm's page
+- News reports of verdicts and settlements
+- State court civil judgment records, primarily Virginia circuit courts
+- Federal court dockets via the free CourtListener and RECAP archive
+- Legal press and published court opinions
 
 Amounts are recorded as publicly reported. Records that cannot be verified against a source are not published. Attorneys can submit a case result for review at [setcalc.com/submit-case-result](https://setcalc.com/submit-case-result); submissions are verified before they appear in the database.
 
