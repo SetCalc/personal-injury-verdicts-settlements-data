@@ -2,109 +2,109 @@
   "dataset": "SetCalc Personal Injury Verdicts and Settlements Dataset",
   "homepage": "https://setcalc.com/personal-injury-settlements-and-verdicts",
   "license": "CC-BY-4.0",
-  "asOf": "2026-08-04",
-  "recordCount": 6186,
+  "asOf": "2026-08-05",
+  "recordCount": 17611,
   "yearMin": 1973,
   "yearMax": 2026,
   "stateCount": 50,
-  "medianAmount": 375000,
+  "medianAmount": 750000,
   "carAccident": {
-    "count": 1556,
-    "medianAmount": 450000,
-    "p25": 180000,
-    "p75": 1275000,
-    "verdicts": 613,
-    "settlements": 943,
+    "count": 4971,
+    "medianAmount": 500706,
+    "p25": 201838.5,
+    "p75": 1378795,
+    "verdicts": 2596,
+    "settlements": 2375,
     "topStates": [
       {
-        "state": "Texas",
-        "count": 615
-      },
-      {
-        "state": "North Carolina",
-        "count": 133
-      },
-      {
         "state": "California",
-        "count": 121
+        "count": 1278
       },
       {
-        "state": "South Carolina",
-        "count": 107
+        "state": "New York",
+        "count": 746
       },
       {
-        "state": "Massachusetts",
-        "count": 85
+        "state": "Texas",
+        "count": 597
+      },
+      {
+        "state": "Florida",
+        "count": 530
+      },
+      {
+        "state": "New Jersey",
+        "count": 529
       }
     ]
   },
   "byPracticeArea": {
     "Car Accident": {
-      "count": 1556,
-      "medianAmount": 450000
-    },
-    "Personal Injury": {
-      "count": 1310,
-      "medianAmount": 22554
-    },
-    "Truck Accident": {
-      "count": 843,
-      "medianAmount": 885000
-    },
-    "Workplace Injury": {
-      "count": 642,
-      "medianAmount": 265000
-    },
-    "Medical Malpractice": {
-      "count": 574,
-      "medianAmount": 1525000
+      "count": 4971,
+      "medianAmount": 500706
     },
     "Premises Liability": {
-      "count": 510,
-      "medianAmount": 647500
+      "count": 2667,
+      "medianAmount": 750000
     },
-    "Other": {
-      "count": 178,
-      "medianAmount": 4190000
+    "Personal Injury": {
+      "count": 2527,
+      "medianAmount": 296000
+    },
+    "Truck Accident": {
+      "count": 1919,
+      "medianAmount": 1000000
+    },
+    "Medical Malpractice": {
+      "count": 1888,
+      "medianAmount": 1750000
+    },
+    "Workplace Injury": {
+      "count": 1076,
+      "medianAmount": 799900
     },
     "Pedestrian Accident": {
-      "count": 164,
-      "medianAmount": 912500
-    },
-    "Bus Accident": {
-      "count": 149,
-      "medianAmount": 500000
+      "count": 940,
+      "medianAmount": 850000
     },
     "Motorcycle Accident": {
-      "count": 135,
-      "medianAmount": 1150000
+      "count": 399,
+      "medianAmount": 1220000
     },
     "Slip and Fall": {
-      "count": 89,
-      "medianAmount": 396500
+      "count": 369,
+      "medianAmount": 489559
+    },
+    "Bus Accident": {
+      "count": 317,
+      "medianAmount": 800000
+    },
+    "Other": {
+      "count": 276,
+      "medianAmount": 6450000
     },
     "Bicycle Accident": {
-      "count": 36,
-      "medianAmount": 970000
+      "count": 262,
+      "medianAmount": 750000
     }
   },
   "byResultType": {
     "settlement": {
-      "count": 3269,
-      "medianAmount": 500000
+      "count": 8928,
+      "medianAmount": 665427.5
     },
     "verdict": {
-      "count": 2917,
-      "medianAmount": 220994
+      "count": 8683,
+      "medianAmount": 933107
     }
   },
   "bySource": {
     "TopVerdict": {
-      "count": 1695,
-      "medianAmount": 750000
+      "count": 12687,
+      "medianAmount": 994317
     },
     "News": {
-      "count": 1104,
+      "count": 1090,
       "medianAmount": 1768500
     },
     "STATE_COURT": {
@@ -112,7 +112,7 @@
       "medianAmount": 15583.5
     },
     "CourtListener": {
-      "count": 725,
+      "count": 718,
       "medianAmount": 500000
     },
     "Joye Law Firm": {
@@ -127,13 +127,33 @@
       "count": 150,
       "medianAmount": 350000
     },
+    "Louisiana Jury Verdict Reporter": {
+      "count": 143,
+      "medianAmount": 650000
+    },
+    "Indiana Jury Verdict Reporter": {
+      "count": 138,
+      "medianAmount": 165657.5
+    },
+    "Tennessee Jury Verdict Reporter": {
+      "count": 130,
+      "medianAmount": 91938
+    },
     "Goings Law Firm": {
       "count": 117,
       "medianAmount": 275000
     },
+    "Alabama Jury Verdict Reporter": {
+      "count": 102,
+      "medianAmount": 210000
+    },
     "GWC Injury Lawyers": {
       "count": 98,
       "medianAmount": 900000
+    },
+    "Mississippi Jury Verdict Reporter": {
+      "count": 81,
+      "medianAmount": 723326
     },
     "South Carolina Lawyers Weekly": {
       "count": 73,
@@ -147,29 +167,21 @@
       "count": 52,
       "medianAmount": 425000
     },
-    "Louisiana Jury Verdict Reporter": {
-      "count": 49,
-      "medianAmount": 1061584
-    },
     "Houde Law Office": {
       "count": 42,
       "medianAmount": 88750
-    },
-    "Tennessee Jury Verdict Reporter": {
-      "count": 41,
-      "medianAmount": 277966
     },
     "Rosenbaum & Thompson": {
       "count": 41,
       "medianAmount": 87500
     },
-    "Kentucky Trial Court Review": {
-      "count": 36,
-      "medianAmount": 1137500
-    },
     "Gelman Gelman Wiskow & McCarthy": {
       "count": 32,
       "medianAmount": 300000
+    },
+    "Kentucky Trial Court Review": {
+      "count": 31,
+      "medianAmount": 1275000
     },
     "Studley Law Offices": {
       "count": 30,
@@ -179,20 +191,12 @@
       "count": 29,
       "medianAmount": 250000
     },
-    "Mississippi Jury Verdict Reporter": {
-      "count": 27,
-      "medianAmount": 723326
-    },
     "DiBella Law": {
       "count": 27,
       "medianAmount": 135000
     },
-    "Indiana Jury Verdict Reporter": {
-      "count": 26,
-      "medianAmount": 1414230
-    },
     "TopVerdict Illinois 2023 Top 50 Personal Injury Verdicts list": {
-      "count": 21,
+      "count": 19,
       "medianAmount": 250000
     },
     "McCoy and Sparks": {
@@ -206,6 +210,10 @@
     "TopVerdict Illinois 2024 Top 100 Verdicts list": {
       "count": 16,
       "medianAmount": 213348.5
+    },
+    "South Carolina Jury Verdict Reporter": {
+      "count": 11,
+      "medianAmount": 296000
     },
     "Bottaro Injury Lawyers": {
       "count": 11,
@@ -318,10 +326,6 @@
     "Butters Brazilian LLP": {
       "count": 1,
       "medianAmount": 1850000
-    },
-    "South Carolina Jury Verdict Reporter": {
-      "count": 1,
-      "medianAmount": 296000
     },
     "Courtroom View Network": {
       "count": 1,
