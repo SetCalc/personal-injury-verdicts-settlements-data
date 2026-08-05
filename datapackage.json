@@ -75,7 +75,7 @@
       "format": "json",
       "mediatype": "application/json",
       "encoding": "utf-8",
-      "description": "Record counts, year range, and median amounts overall and by practice area, result type, and source"
+      "description": "Record counts, year range, and median amounts overall and by practice area and result type"
     }
   ]
 }

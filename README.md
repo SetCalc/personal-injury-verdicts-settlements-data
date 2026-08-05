@@ -31,7 +31,7 @@ The data is licensed [CC BY 4.0](LICENSE): free to use in research, journalism, 
 | [data/verdicts-settlements.csv](data/verdicts-settlements.csv) | Full dataset, one row per case result |
 | [data/verdicts-settlements.json](data/verdicts-settlements.json) | Same records as a JSON array |
 | [data/car-accident-settlements.csv](data/car-accident-settlements.csv) | Car accident records only, same columns (4,971 rows) |
-| [data/summary-stats.json](data/summary-stats.json) | Record counts, year range, and median amounts overall and by practice area, result type, and source |
+| [data/summary-stats.json](data/summary-stats.json) | Record counts, year range, and median amounts overall and by practice area and result type |
 | [scripts/export-public-dataset.mjs](scripts/export-public-dataset.mjs) | Script that regenerates the data files from the live SetCalc API (Node 18+, no dependencies) |
 | [datapackage.json](datapackage.json) | Machine-readable Frictionless Data package descriptor |
 | [CITATION.cff](CITATION.cff) | Citation metadata (GitHub renders a "Cite this repository" button from it) |
@@ -70,7 +70,7 @@ Counts and median amounts in the August 5, 2026 snapshot. The skew caveat above 
 | Other | 276 | $6,450,000 |
 | Bicycle Accident | 262 | $750,000 |
 
-The general Personal Injury category mixes large reported verdicts with the Virginia state-court civil judgments, so its median sits below the accident-specific categories while still running well above what a routine claim typically pays.
+The general Personal Injury category mixes large reported verdicts with bulk state-court civil judgments, so its median sits below the accident-specific categories while still running well above what a routine claim typically pays.
 
 ## Car accident settlement data
 
@@ -93,8 +93,8 @@ Records are compiled from public sources, reviewed before publication, and limit
 - State jury-verdict reporting that covers the full range of outcomes, which adds representative routine-case coverage and pulls state-level medians toward typical values
 - Firm-published case results, each retained with a link to the reporting firm's page
 - News reports of verdicts and settlements
-- State court civil judgment records, primarily Virginia circuit courts
-- Federal court dockets via the free CourtListener and RECAP archive
+- State court civil judgment records
+- Federal court dockets
 - Legal press and published court opinions
 
 Amounts are recorded as publicly reported. Records that cannot be verified against a source are not published. Attorneys can submit a case result for review at [setcalc.com/submit-case-result](https://setcalc.com/submit-case-result); submissions are verified before they appear in the database.

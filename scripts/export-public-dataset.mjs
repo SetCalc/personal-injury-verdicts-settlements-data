@@ -51,12 +51,38 @@ async function fetchPage(page, attempt = 1) {
   }
 }
 
+// Strip trailing source-attribution sentences from the case description so no
+// third-party source name is repeated in prose. Per-record provenance lives in
+// the structured `source` field, which is retained.
+const SOURCE_BRANDS = /\b(?:TopVerdict|Lawyers\s+Weekly|CourtListener|RECAP|Jury\s+Verdict\s+Reporter|Trial\s+Court\s+Review|Law360|Justia|MoreLaw)\b/;
+function cleanDescription(s) {
+  if (typeof s !== 'string') return s;
+  let out = s;
+  const m = out.match(SOURCE_BRANDS);
+  if (m) {
+    const before = out.slice(0, m.index);
+    // Cut the whole trailing clause that names a source, back to the last real
+    // sentence/clause boundary. A '.' right after an abbreviation ("No", or a
+    // single letter as in "v.") is not a boundary.
+    let cut = -1;
+    for (let i = 0; i < before.length; i++) {
+      if (before[i] === ';') cut = i;
+      else if (before[i] === '.' && !/(?:\bNo|\s[A-Za-z])$/.test(before.slice(0, i))) cut = i;
+    }
+    out = cut >= 0 ? before.slice(0, cut) : before.replace(/\b(?:ranked|listed)\b[\s\S]*$/i, '');
+  }
+  out = out.replace(/\s{2,}/g, ' ').replace(/[\s;,.]+$/, '').trim();
+  if (out) out += '.';
+  return out;
+}
+
 function toRecord(v) {
   const rec = {};
   for (const f of FIELDS) {
     let val = v[f];
     if (val === undefined || val === null) val = '';
     if (typeof val === 'string') val = val.replace(/\r/g, '').trim();
+    if (f === 'description') val = cleanDescription(val);
     rec[f] = val;
   }
   return rec;
@@ -166,7 +192,6 @@ async function main() {
     },
     byPracticeArea: group('practiceArea'),
     byResultType: group('resultType'),
-    bySource: group('source'),
   };
 
   const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
@@ -184,9 +209,8 @@ async function main() {
   writeFileSync(join(outDir, 'verdicts-settlements.json'), JSON.stringify(records, null, 1) + '\n');
   writeFileSync(join(outDir, 'summary-stats.json'), JSON.stringify(summary, null, 2) + '\n');
 
-  console.log(JSON.stringify({ ...summary, byPracticeArea: undefined, bySource: undefined, byResultType: undefined }, null, 2));
+  console.log(JSON.stringify({ ...summary, byPracticeArea: undefined, byResultType: undefined }, null, 2));
   console.log('practice areas:', Object.entries(summary.byPracticeArea).map(([k, v]) => `${k}:${v.count}`).join(' '));
-  console.log('sources:', Object.entries(summary.bySource).map(([k, v]) => `${k}:${v.count}`).join(' '));
   console.log('result types:', Object.entries(summary.byResultType).map(([k, v]) => `${k}:${v.count}`).join(' '));
   console.log('car accident:', JSON.stringify(summary.carAccident));
 }
